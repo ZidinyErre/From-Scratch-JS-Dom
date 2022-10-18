@@ -41,8 +41,22 @@ window.addEventListener("mousedown", () => {
   mousemove.style.transform = "scale(2) translate(-25%, 25%)";
 
 });
+
 window.addEventListener("mouseup", () => {
   mousemove.style.transform = "scale(1) translate(-50%, 50%)";
   mousemove.style.border = "2px solid teal";
 
 });
+
+questionContainer.addEventListener("mouseenter", () => {
+  questionContainer.style.background = "rgba(0,0,0,0.6";
+});
+
+questionContainer.addEventListener("mouseout", () => {
+  questionContainer.style.background = "pink";
+});
+
+response.addEventListener("mouseover", () => {
+  response.style.transform = "rotate(2deg)";
+})
+
