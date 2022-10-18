@@ -15,14 +15,16 @@ questionContainer.addEventListener("click", () => {
 });
 
 btn1.addEventListener("click", () => {
-  response.style.visibility = "visible";
-  response.style.opacity = "1";
+  response.classList.add("show-response");
+  // response.style.visibility = "visible";
+  // response.style.opacity = "1";
   response.style.background = "green";
 });
 
 btn2.addEventListener("click", () => {
-  response.style.visibility = "visible";
-  response.style.opacity = "1";
+  response.classList.add("show-response");
+  // response.style.visibility = "visible";
+  // response.style.opacity = "1";
   response.style.background = "red";
 });
 
