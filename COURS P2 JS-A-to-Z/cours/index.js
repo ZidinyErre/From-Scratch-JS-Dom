@@ -85,3 +85,17 @@ document.addEventListener("keypress", (e) => {
   
   ring();
 });
+//------------------------------------------------------
+// Scroll Event
+
+const nav  = document.querySelector("nav");
+
+console.log(window.scrollY);
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 120) {
+    nav.style.top = 0;
+  } else {
+    nav.style.top = "-50px";
+  }
+});
