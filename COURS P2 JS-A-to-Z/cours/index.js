@@ -130,3 +130,23 @@ form.addEventListener("submit", (e) => {
 });
 
 //-------------------------------------------------------
+// Load event
+window.addEventListener("load", () => {
+  console.log("Document Chargé !");
+});
+
+//--------------------------------------------------------
+// ForEach
+// const boxes = document.getElementsByClassName(".box");
+const boxes = document.querySelectorAll(".box");
+
+console.log(boxes);
+
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    console.log(e.target);
+    e.target.style.transform = "scale(0.7)";
+  });
+});
+
+//--------------------------------------------------------
