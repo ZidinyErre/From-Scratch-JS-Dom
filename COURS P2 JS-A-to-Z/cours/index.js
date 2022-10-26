@@ -204,3 +204,32 @@ btn1.addEventListener("click", () =>{
   // questionContainer.innerHTML = "<h3>Bravo" + " " +answer +"</h3>"
   questionContainer.innerHTML += "<h3>Bravo" + " " +answer +"</h3>"
 });
+
+setTimeout(() => {
+  //  logique à éxécuter
+  questionContainer.style.borderRadius = "300px";
+}, 2000);
+
+let interval = setInterval(()=> {
+  document.body.innerHTML += `<div class = 'box'>
+      <h2> Nouvelle Boite ! </h2>
+    </div>`;
+}, 1000);
+
+document.body.addEventListener("click", (e) => {
+  // e.target.remove();
+  clearInterval(interval);
+});
+
+// location
+// console.log(location.href);
+// console.log(location.host);
+// console.log(location.pathname);
+// console.log(location.search);
+// location.replace("http://lequipe.fr");
+
+// onload fait la même chose que location replace ici
+
+// window.onload = () => {
+//   location.href = "http://twitter.fr";
+// };
