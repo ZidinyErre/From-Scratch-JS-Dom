@@ -12,3 +12,7 @@ buttons.forEach((button) => {
 equal.addEventListener("click", () => {
     result.textContent = eval(result.textContent);
 });
+
+clear.addEventListener("click", () => {
+    result.textContent = "";
+})
