@@ -174,13 +174,33 @@ document.body.addEventListener("click", () => {
 // Stop propagation
 
 //  Je l'ai pas bien maitrisé
-questionContainer.addEventListener("click", (e) =>{
-  alert("Test !");
-  e.stopPropagation();
-});
+// questionContainer.addEventListener("click", (e) =>{
+//   alert("Test !");
+//   e.stopPropagation();
+// });
 
 // removeEventListener
 //--------------------------------------------------------
 // BOM
 // console.log(window.innerHeight);
 // console.log(window.scrollY);
+
+// window.open("http://google.com", "cours js" , "height = 600, width = 800");
+// window.close();
+
+// Evénement adossés à Window
+// alert("hello");
+
+// confirm
+btn2.addEventListener("click", () =>{
+  confirm("Voulez vous vraiment vous tromper ?");
+});
+
+let answer;
+// prompt
+btn1.addEventListener("click", () =>{
+  answer = prompt("Entrez votre Nom!");
+
+  // questionContainer.innerHTML = "<h3>Bravo" + " " +answer +"</h3>"
+  questionContainer.innerHTML += "<h3>Bravo" + " " +answer +"</h3>"
+});
