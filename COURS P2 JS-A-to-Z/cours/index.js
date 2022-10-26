@@ -11,7 +11,6 @@ console.log(btn1);
 console.log(btn2);
 
 questionContainer.addEventListener("click", () => {
-  console.log("Click !");
   questionContainer.classList.toggle("question-clicked");
 });
 
@@ -67,12 +66,12 @@ response.addEventListener("mouseover", () => {
 const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
 
-// Audio 
-// const ring = () => {
-//   const audio = new Audio();
-//   audio.src = "./Enter.mp3";
-//   audio.play();
-// };
+Audio 
+const ring = () => {
+  const audio = new Audio();
+  audio.src = "./Enter.mp3";
+  audio.play();
+};
 
 document.addEventListener("keypress", (e) => {
   key.textContent = e.key;
@@ -85,7 +84,7 @@ document.addEventListener("keypress", (e) => {
     keypressContainer.style.background = "red";
   }
   
-  // ring();
+  ring();
 });
 //------------------------------------------------------
 // Scroll Event
@@ -150,3 +149,38 @@ boxes.forEach((box) => {
 });
 
 //--------------------------------------------------------
+// addEventListener Vs onclick
+
+// On peut pas avoir deux méthodes onclik le dernier prends de le dessus sur l'autre !!
+
+// document.body.onclick = () => {
+//   console.log("Click !");
+// };
+
+// document.body.onclick = () => {
+//   console.log("Scroll !");
+// };
+
+// Bubbling
+document.body.addEventListener("click", () => {
+  console.log("click 1!");
+});
+// Usecapture
+document.body.addEventListener("click", () => {
+  console.log("click 2!");
+}, true
+);
+//--------------------------------------------------------
+// Stop propagation
+
+//  Je l'ai pas bien maitrisé
+questionContainer.addEventListener("click", (e) =>{
+  alert("Test !");
+  e.stopPropagation();
+});
+
+// removeEventListener
+//--------------------------------------------------------
+// BOM
+// console.log(window.innerHeight);
+// console.log(window.scrollY);
