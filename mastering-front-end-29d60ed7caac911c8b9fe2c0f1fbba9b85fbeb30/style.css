@@ -8,18 +8,24 @@
   font-family: "font-1", Arial;
   box-sizing: border-box;
 }
+/* li a {
+  pointer-events: auto;
+} */
 li {
   list-style: none;
+
 }
 a,
 a:visited {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+
 }
 a:hover {
   font-size: 1.3rem;
   color: #2128bd;
+
 }
 body {
   background: rgb(27, 27, 27);
@@ -35,6 +41,7 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-between;
+  /* pointer-events: auto; */
 }
 section {
   display: flex;
@@ -94,13 +101,12 @@ footer img {
 }
 
 .mousemove1{
-  width:30px;
-  height: 30px;
+  width:15px;
+  height: 15px;
   border-radius: 50%;
   background-color: bisque;
   transform: translate(-50%, -50%);
   transition: 0.2s  ease-out;
-
   position: absolute;
 }
 
@@ -108,20 +114,24 @@ footer img {
   width:50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgb(196, 250, 255);
-  transform: translate(-14%, -33%);
-  transition: 50s  ease-out;
+  background-color: rgb(201, 198, 198);
+  transform: translate(-44%, -49%);
+  transition: 0.5s  ease-out;
   position: absolute;
+  mix-blend-mode: screen;
+
 }
 
 .mousemove3{
-  width:70px;
-  height: 70px;
+  width:80px;
+  height: 80px;
   border-radius: 50%;
-  background-color: rgb(196, 196, 255);
-  transform: translate(-20%, -15%);
-  transition: 80s  ease-out;
+  background-color: rgb(49, 48, 48);
+  transform: translate(-39%, -56%);
+  transition: 0.8s  ease-out;
   position: absolute;
+  mix-blend-mode: screen;
+
 }
 
 /* ************** RESPONSIVE *************** */

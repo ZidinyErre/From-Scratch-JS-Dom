@@ -10,16 +10,20 @@ const mousemove1 = document.querySelector(".mousemove1");
 const mousemove2 = document.querySelector(".mousemove2");
 const mousemove3 = document.querySelector(".mousemove3");
 
-// console.log(mousemove);
+const anchor = document.querySelectorAll(".anchor");
+
+console.log(anchor);
 
 window.addEventListener("mousemove", (e) => {
     mousemove1.style.left = e.pageX + "px";
     mousemove1.style.top = e.pageY + "px";
 
-    // mousemove2.style.left = e.pageX + "px";
-    // mousemove2.style.top = e.pageY + "px";
+    mousemove2.style.left = e.pageX + "px";
+    mousemove2.style.top = e.pageY + "px";
 
-    // mousemove3.style.left = e.pageX + "px";
-    // mousemove3.style.top = e.pageY + "px";
+    mousemove3.style.left = e.pageX + "px";
+    mousemove3.style.top = e.pageY + "px";
 
 });
+
+    anchor.style.pointerEvents = "auto";
