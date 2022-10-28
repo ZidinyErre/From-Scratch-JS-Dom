@@ -9,14 +9,25 @@
 // Bonus : quand on clicke sur la popup elle disparait pour toujours
 
 const navbar = document.querySelector("nav");
+const image = document.querySelector("#imgImprovise");
+const popup = document.querySelector(".pop-up");
 
-console.log(navbar);
+console.log(popup);
 
 window.addEventListener("scroll", () => {
-if (window.scrollY > 200  ) {
+
+  if (window.scrollY > 200) {
     navbar.style.height = "55px";
-};
-// if (condition) {
-    
-// };
+  }
+  if (window.scrollY < 142) {
+    navbar.style.height = "90px";
+  }
+  if (window.scrollY > 350) {
+    image.style.opacity = 1;
+    image.style.transform = "none";
+  }
+  if (window.scrollY >= 1632){
+    popup.style.opacity = 1;
+    popup.style.transform = "none";
+  }
 });
