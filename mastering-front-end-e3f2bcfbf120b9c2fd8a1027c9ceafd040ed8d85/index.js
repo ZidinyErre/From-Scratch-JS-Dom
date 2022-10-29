@@ -9,11 +9,20 @@
 // Priorités en CSS : id > classe > baliseHtml
 
 const sideBar = document.getElementById("side-bar");
+const content = document.querySelector(".content");
 
-console.log(sideBar);
+console.log(content);
 
 btn.addEventListener("click", () => {
     // sideBar.classList.add("sid");
     sideBar.classList.toggle("sid");
     // sideBar.style.left = "0px";
 });
+
+content.addEventListener("click", () => {
+    sideBar.classList.remove("sid");
+
+    // if (sideBar.style.left = "0px") {
+    //     // sideBar.style.left = "-230px";
+    // }
+})
