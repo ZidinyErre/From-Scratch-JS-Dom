@@ -12,7 +12,7 @@ const sideBar = document.getElementById("side-bar");
 const content = document.querySelector(".content");
 
 console.log(content);
-
+//  Dans la correction le toggle marche pas car le professeur crée une class qu'il ne lie pas a l'id il doit donc mettre !important a la classe pour qu'il passe devant l'id. Autant pour moi il utilise la même technique.
 btn.addEventListener("click", () => {
     // sideBar.classList.add("sid");
     sideBar.classList.toggle("sid");

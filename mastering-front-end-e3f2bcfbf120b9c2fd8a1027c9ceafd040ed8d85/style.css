@@ -34,6 +34,26 @@ p {
 #side-bar.sid {
   left: 0px;
 }
+
+.sid span {
+  position: absolute;
+}
+
+.sid span:nth-child(1){
+  transform: rotate(45deg);
+}
+.sid span:nth-child(2){
+  opacity: 0;
+}
+.sid span:nth-child(3){
+  transform: rotate(-45deg);
+
+}
+
+.sid ~ .content {
+  opacity: 0.3;
+}
+
 .toggle-btn {
   position: absolute;
   top: 30px;
