@@ -47,4 +47,51 @@ let data = [
     }
 ];
 
-console.log(data[2]);
+// console.log(data[2]);
+
+// ------------------------------
+// Lest structures de controle
+// ------------------------------
+if (data[0].age > data[1].age) {
+    // console.log(data[0].pseudo + " est plus agé que " + data[1].pseudo);
+} else{
+    // Valeur si faux
+}
+
+// Différentes façon écrire if
+// if (valeur à tester) valeur si vrai
+
+// if (valeur à tester)
+//  valeur si vrai
+// else
+// valeur si faux
+
+// valeur à tester ? si vrai : si faux 
+
+//  While 
+let w = 0;
+
+while ( w < 10) {
+    w++;
+    // console.log("La valeur de w est de :" + w);
+}
+
+// Do While
+let d = 0;
+
+do {
+    d++;
+    // console.log(d);
+} while (d < 5);
+
+//  Les boucles for
+for(const user of data){
+    // document.body.innerHTML += `<li>${user.pseudo} - ${user.age} ans</li>`;
+};
+
+// on déclare la valeur de i / jusqu'ou on boucle / incrémente i si la condition 2 n'est pas remplie
+for(i= 0; i < data.length; i++) {
+    // console.log(i);
+    console.log(data[i].technos[0]);
+};
+
