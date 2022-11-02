@@ -113,3 +113,92 @@ document.body.addEventListener("click", (e) => {
       null;
   }
 });
+
+// Méthodes String
+let string2 = "Javascript est un langage orienté objet";
+
+// console.log(eval(parseInt("1") + 2));
+// console.log(typeof parseInt("42") + typeof "42");
+// console.log(isNaN(string)); // est ce que c'est un nombre ?
+// console.log(string2.length);
+// console.log(string2[string2.length - 1]); Pas bien compris
+
+// console.log(string2.indexOf("x")); Retourne -1 si il ne le connait pas
+
+// let newString = string2.slice(5, 17);
+// console.log(newString);
+
+// console.log(string2.split("i"));
+
+// console.log(string2.toUpperCase()); //(string2.toLowerCase())
+
+// console.log(string2.replace("Javascript", "PHP"));
+
+//---------------------------------------------------------
+//Méthodes Numbers
+//---------------------------------------------------------
+
+let number2 = 42.1234;
+let numberString = "42.12 est un chiffre "
+
+// console.log(number2.toFixed(1));
+// console.log(parseInt(numberString));
+// console.log(parseFloat(numberString));
+
+// Math
+
+// console.log(Math.PI);
+// console.log(Math.round(4.5));
+// console.log(Math.floor(4.9));
+// console.log(Math.ceil(4.1));
+
+// console.log(Math.floor(Math.random() * 50)); la plus importantes
+
+//---------------------------------------------------------
+//Méthodes Arrays
+//---------------------------------------------------------
+let array3 = ["Javascript", "PHP", "Python"];
+let array4 = ["Ruby", "Solidity"];
+
+let newArray = array3.concat(array4);
+
+// let newArray = [...array3, ...array4];
+// console.log(newArray);
+// console.log(array3.join(" ---"));
+
+// console.log(array3.slice(1));
+// console.log(newArray.slice(3, 5));
+
+// console.log(array3.indexOf("Python"));
+// array3.forEach((languages) => console.log(languages));
+// console.log(array3.every((languages) => languages  === "Php")); 
+// console.log(array3.some((languages) => languages  === "PHP")); 
+
+// let shift = array3.shift();
+// console.log(array3);
+
+// console.log(array3.pop());
+
+// const restArray = array3.splice(1, 1, "C++");
+// console.log(array3); splice en gros c'est du t'enlève et tu rajoute
+// const restArray = array3.splice(0, 2, ...array4);
+// console.log(array3);
+
+// IMPORTANT //
+
+let arrayNumber = [4, 74, 28, 12, 1];
+// console.log(arrayNumber.reduce((x, y)=> x + y));
+// arrayNumber.push("Coucou");
+// console.log(arrayNumber);
+
+//  FILTER , SORT, MAP
+// console.log(arrayNumber.filter((number) => number > 10));
+// console.log(arrayNumber.sort()); range selon le premier index c'est pour ça que 12 est avant 4
+
+// console.log(arrayNumber.sort((a, b) => b - a));  Range dans l'ordre numérique inverse dans ce cas
+
+document.body.innerHTML = arrayNumber.map((number) =>  `<li> ${number} </li>`).join("");
+
+
+
+
