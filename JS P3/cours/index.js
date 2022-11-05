@@ -98,7 +98,7 @@ for (i = 0; i < data.length; i++) {
 
 document.body.addEventListener("click", (e) => {
   console.log(e.target.id);
-//   Nous permet de pas répéter les if
+  //   Nous permet de pas répéter les if
   switch (e.target.id) {
     case "javascript":
       document.body.style.background = "yellow";
@@ -139,7 +139,7 @@ let string2 = "Javascript est un langage orienté objet";
 //---------------------------------------------------------
 
 let number2 = 42.1234;
-let numberString = "42.12 est un chiffre "
+let numberString = "42.12 est un chiffre ";
 
 // console.log(number2.toFixed(1));
 // console.log(parseInt(numberString));
@@ -171,8 +171,8 @@ let newArray = array3.concat(array4);
 
 // console.log(array3.indexOf("Python"));
 // array3.forEach((languages) => console.log(languages));
-// console.log(array3.every((languages) => languages  === "Php")); 
-// console.log(array3.some((languages) => languages  === "PHP")); 
+// console.log(array3.every((languages) => languages  === "Php"));
+// console.log(array3.some((languages) => languages  === "PHP"));
 
 // let shift = array3.shift();
 // console.log(array3);
@@ -197,8 +197,21 @@ let arrayNumber = [4, 74, 28, 12, 1];
 
 // console.log(arrayNumber.sort((a, b) => b - a));  Range dans l'ordre numérique inverse dans ce cas
 
-document.body.innerHTML = arrayNumber.map((number) =>  `<li> ${number} </li>`).join("");
+// document.body.innerHTML = arrayNumber.map((number) =>  `<li> ${number} </li>`).join("");
 
+//---------------------------------------------------------
+//Méthodes Objects
+//---------------------------------------------------------
 
-
-
+document.body.innerHTML = data
+  // .filter((user) => user.admin === false)
+  .filter((user) => user.pseudo.includes("a"))
+  .sort((a, b) => b.age - a.age)
+  .map(
+    (user) => ` <div class = "user-card"> 
+  <h2> ${user.pseudo} </h2>
+  <p>Age : ${user.age} ans </p>
+  <p>Status : ${user.admin ? "Modérateur" : "Membre"}  </p>
+</div>`
+  )
+  .join(" ");
