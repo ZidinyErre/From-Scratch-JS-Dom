@@ -40,23 +40,38 @@ const emailChecker = (value) => {
   }
 };
 
-// const passwordChecker = (value) => {
-//   if (!value.match(/^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/)
-//   ) {
-//     errorDisplay("password", "Minimum de 8 caractères, une majuscule, un chiffre et un caractère spécial");
-//     progressBar.classList.add('progressRed');
-//     password = null;
+const passwordChecker = (value) => {
+  progressBar.classList = "";
+  if (!value.match(/^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$/)
+  ) {
+    errorDisplay("password", "Minimum de 8 caractères, une majuscule, un chiffre et un caractère spécial");
+    progressBar.classList.add('progressRed');
+    password = null;
 
 
-//   } else if (value.length < 12) {
-//     progressBar.classList.add('progressBlue')
-//     errorDisplay("password", "", true);
-//     password = value;
+  } else if (value.length < 12) {
+    progressBar.classList.add('progressBlue');
+    errorDisplay("password", "", true);
+    password = value;
 
-//   }
-// };
+  } else {
+    progressBar.classList.add("progressGreen");
+    errorDisplay("password", "", true);
+    password = value;
+  }
+  if(confirmPass) confirmChecker(confirmPass)
+};
 
-const confirmChecker = () => {};
+const confirmChecker = (value) => {
+  if (value !== password) {
+    errorDisplay("confirm", "Les mots de passe ne correspondent pas");
+    confirmPass =  false ;
+
+  } else {
+    errorDisplay("confirm", "", true);
+    confirmPass =  true ;
+  }
+};
 
 inputs.forEach((input) => {
   input.addEventListener("input", (e) => {
