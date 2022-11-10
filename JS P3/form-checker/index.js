@@ -1,6 +1,8 @@
+const form = document.querySelector("form");
 const inputs = document.querySelectorAll(
   'input[type="text"], input[type="password"]'
 );
+const progressBar = document.getElementById("progress-bar");
 let pseudo, email, password, confirmPass;
 
 const errorDisplay = (tag, message, valid) => {
@@ -83,13 +85,41 @@ inputs.forEach((input) => {
         emailChecker(e.target.value);
         break;
       case "password":
-        emailChecker(e.target.value);
+        passwordChecker(e.target.value);
         break;
       case "confirm":
-        emailChecker(e.target.value);
+        confirmChecker(e.target.value);
         break;
       default:
         nul;
     }
   });
 });
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (pseudo && email && password && confirmPass) {
+    const data = {
+      pseudo ,
+      email,
+      password,
+      // pseudo : pseudo,
+      // email : email,
+      // password : password,
+    };
+    console.log(data);
+    inputs.forEach((input) => (input.value = ""));
+    progressBar.classList = "";
+
+    pseudo = null;
+    email = null;
+    password = null;
+    confirmPass = null;
+    alert("Inscription validée !");
+
+  } else {
+    alert("veuillez remplir correctement les champs");
+  }
+
+})
