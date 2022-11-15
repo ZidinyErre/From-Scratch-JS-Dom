@@ -1,11 +1,17 @@
 body{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+}
+
+form{
+    margin: 0 auto;
+    width: 700px;
 }
 .container{
     width: 650px;
     height: 250px;
+    margin: 0 auto;
     background-color: orange;
     display: flex;
     align-items: center;

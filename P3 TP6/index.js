@@ -8,3 +8,16 @@
 // Stocker dans le local storage la liste
 
 // Consulter le local storage au lancement de l'application pour rajouter les todos
+
+const monInput = document.getElementById("todo");
+const container = document.querySelector(".container");
+
+monInput.addEventListener("keypress", (e) => {
+  console.log(e );
+//   if (e.code === "Enter") {
+//     e.preventDefault();
+//     container.innerHTML += `<span> ${e.code} </span>`
+//   }
+});
+
+console.log(monInput.value);
