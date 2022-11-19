@@ -6,9 +6,7 @@ body{
 
 form{
     margin: 0 auto;
-    width: 700px;
-}
-.container{
+    /* width: 700px; */
     width: 650px;
     height: 250px;
     margin: 0 auto;
@@ -17,4 +15,15 @@ form{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
 }
+/* .container{
+    width: 650px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */

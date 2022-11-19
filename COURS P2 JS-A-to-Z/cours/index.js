@@ -210,16 +210,16 @@ setTimeout(() => {
   questionContainer.style.borderRadius = "300px";
 }, 2000);
 
-// let interval = setInterval(()=> {
-//   document.body.innerHTML += `<div class = 'box'>
-//       <h2> Nouvelle Boite ! </h2>
-//     </div>`;
-// }, 1000);
+let interval = setInterval(()=> {
+  document.body.innerHTML += `<div class = 'box'>
+      <h2> Nouvelle Boite ! </h2>
+    </div>`;
+}, 1000);
 
-// document.body.addEventListener("click", (e) => {
-//   // e.target.remove();
-//   clearInterval(interval);
-// });
+document.body.addEventListener("click", (e) => {
+  // e.target.remove();
+  clearInterval(interval);
+});
 
 // location
 // console.log(location.href);

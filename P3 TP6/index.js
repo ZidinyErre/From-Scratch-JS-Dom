@@ -10,14 +10,30 @@
 // Consulter le local storage au lancement de l'application pour rajouter les todos
 
 const monInput = document.getElementById("todo");
-const container = document.querySelector(".container");
+// const container = document.querySelector(".container");
+const form = document.querySelector(".myForm");
+
+console.log(form);
 
 monInput.addEventListener("keypress", (e) => {
-  console.log(e );
-//   if (e.code === "Enter") {
-//     e.preventDefault();
-//     container.innerHTML += `<span> ${e.code} </span>`
-//   }
+  console.log(e.key  + "2");
+  // let data = [];
+  if (e.key === "Enter") {
+    e.preventDefault();
+  // console.log(monInput.value);
+    document.body.innerHTML += `<span> ${monInput.value} </span>`
+  }
+  
 });
 
-console.log(monInput.value);
+
+
+// if (e.code === "Enter") {
+//   e.preventDefault();
+// let formData = new FormData(this);
+// let input = formData.get(monInput);
+
+// console.log(input);
+
+//   // container.innerHTML += `<span> ${e.code} </span>`
+// }
