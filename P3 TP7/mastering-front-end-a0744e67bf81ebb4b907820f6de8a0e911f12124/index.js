@@ -11,9 +11,26 @@
 
 const choix = document.querySelector("#choice");
 const go = document.querySelector("#start");
+const div = document.querySelector("#countdownDisplay");
+// function set() {
+//     setInterval()
+// }
+// let temps = choice.value;
+let minutes;
+let seconds;
+
+function diminuerTemps(params) {
+    setInterval(()=>{
+        // console.log();
+        div.innerHTML = `<div> ${ choice.value--} </div>`;
+
+    }, 1000)
+};
 
 go.addEventListener("click", (e)=>{
     e.preventDefault();
-    console.log(choice.value);
+    div.innerHTML = `<div> ${ choice.value--} </div>`;
+
+    diminuerTemps();
 });
 
